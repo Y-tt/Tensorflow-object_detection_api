@@ -1,0 +1,55 @@
+Windows
+
+try1                                    Please upgrade your bazel installation to version 0.19.0 or higher to build TensorFlow!
+bazel==0.15.0
+tensorflow==1.13.1
+
+try2
+bazel==0.19.0
+tensorflow==1.13.1
+
+try3                                      success：将VS的工具包，包括Windows10 SDK等都安装后，bazel build成功！
+bazel==0.19.1
+tensorflow==1.13.1
+log：
+ERROR: C:/users/tt/_bazel_tt/2d6tcrti/external/fft2d/BUILD.bazel:26:1: C++ compilation of rule '@fft2d//:fft2d' failed (Exit -1): vc_installation_error.bat failed: error executing command
+  cd C:/users/tt/_bazel_tt/2d6tcrti/execroot/org_tensorflow
+  SET INCLUDE=
+    SET PATH=
+    SET PWD=/proc/self/cwd
+    SET PYTHON_BIN_PATH=D:/Python36/python.exe
+    SET PYTHON_LIB_PATH=D:/Python36/lib/site-packages
+    SET TEMP=
+    SET TF_DOWNLOAD_CLANG=0
+    SET TF_NEED_CUDA=0
+    SET TF_NEED_OPENCL_SYCL=0
+    SET TF_NEED_ROCM=0
+    SET TMP=
+  external/local_config_cc/vc_installation_error.bat /nologo /DCOMPILER_MSVC /DNOMINMAX /D_WIN32_WINNT=0x0600 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /bigobj /Zm500 /EHsc /wd4351 /wd4291 /wd4250 /wd4996 /Iexternal/fft2d /Ibazel-out/x64_windows-opt/genfiles/external/fft2d /Ibazel-out/x64_windows-opt/bin/external/fft2d /Iexternal/bazel_tools /Ibazel-out/x64_windows-opt/genfiles/external/bazel_tools /Ibazel-out/x64_windows-opt/bin/external/bazel_tools /showIncludes /MD /O2 /Oy- /DNDEBUG /wd4117 -D__DATE__="redacted" -D__TIMESTAMP__="redacted" -D__TIME__="redacted" /Gy /Gw -w /Fobazel-out/x64_windows-opt/bin/external/fft2d/_objs/fft2d/fftsg.obj /c external/fft2d/fft/fftsg.c
+
+The target you are compiling requires Visual C++ build tools.
+Bazel couldn't find a valid Visual C++ build tools installation on your machine.
+
+Visual C++ build tools seems to be installed at D:\Microsoft Visual Studio 14.0\VC\
+But Bazel can't find the following tools:
+    VCVARSALL.BAT, cl.exe, link.exe, lib.exe, ml64.exe
+
+Please check your installation following https://docs.bazel.build/versions/master/windows.html#using
+
+Target //tensorflow/lite/toco:toco failed to build
+INFO: Elapsed time: 56.032s, Critical Path: 0.70s, Remote (0.00% of the time): [queue: 0.00%, setup: 0.00%, process: 0.00%]
+INFO: 5 processes: 5 local.
+FAILED: Build did NOT complete successfully
+
+
+try4                                          fail
+bazel=0.15.0
+tensorflow==1.10.0
+
+
+————————————————————————————————————————————————————————————————————————————————————
+Ubuntu18.04.5
+
+try
+bazel=0.15.0
+tensorflow==1.10.0

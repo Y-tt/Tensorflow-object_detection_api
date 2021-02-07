@@ -1,0 +1,8 @@
+tensorflow.python.framework.errors_impl.NotFoundError: NewRandomAccessFile failed to Create/Open: C:/Users/tt/Desktop/models-master/research/object_detection/vov_data/labelmap.pbtxt : ϵͳ\udcd5Ҳ\udcbb\udcb5\udcbdָ\udcb6\udca8\udcb5\udcc4\udcceļ\udcfe\udca1\udca3
+; No such file or directory
+
+
+tf==1.12.0
+python==3.6
+model 1.13.0
+no gpu support

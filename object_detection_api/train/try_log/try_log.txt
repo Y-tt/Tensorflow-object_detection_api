@@ -1,0 +1,74 @@
+try1                            fail：Windows fatal exception: access violation Current thread 0x00000e40 (most recent call first):
+tf==1.15.0 
+python==3.6 
+model-master
+no gpu support
+
+
+try2                            fail：ModuleNotFoundError: No module named 'tensorflow.compat.v1'
+tf==1.12.0 
+python==3.6 
+model-master
+no gpu support
+
+try3
+tf==1.14.0 
+python==3.6 
+model-master
+no gpu support
+
+try4
+tf==1.13.0 
+python==3.6 
+model-master
+no gpu support
+
+try5
+tf==1.11.0 
+python==3.6 
+model-master
+no gpu support
+
+try6
+tf==1.10.0 
+python==3.6 
+model-master
+no gpu support
+
+——————————————————————————————————————
+
+try1                                 fail
+tf==1.15.0
+python==3.6
+model 1.13.0
+no gpu support
+
+try2
+tf==1.14.0
+python==3.6
+model 1.13.0
+no gpu support
+
+try3
+tf==1.13.0
+python==3.6
+model 1.13.0
+no gpu support
+
+try4                                 #success  不要使用tensorflow/models/research/ 下的setup.py安装object_detection_api，会报错！详见Tensorflow ObjectDtection API训练自己的数据.md                       
+tf==1.12.0
+python==3.6
+model 1.13.0
+no gpu support
+
+try5
+tf==1.11.0
+python==3.6
+model 1.13.0
+no gpu support
+
+try6
+tf==1.10.0
+python==3.6
+model 1.13.0
+no gpu support

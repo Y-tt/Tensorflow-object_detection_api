@@ -1,0 +1,71 @@
+(tf1) C:\Users\tt\Desktop\tf1\research>python object_detection/model_main.py --pipeline_config_path=C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/ssd_mobilenet_v1_coco.config --model_dir=C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/output --num_train_steps=200 --sample_1_of_n_eval_examples=1 --alsologtostderr
+2021-01-28 19:12:30.036492: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'cudart64_100.dll'; dlerror: cudart64_100.dll not found
+2021-01-28 19:12:30.036641: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+WARNING:tensorflow:Forced number of epochs for all eval validations to be 1.
+W0128 19:12:33.206232  1464 model_lib.py:793] Forced number of epochs for all eval validations to be 1.
+INFO:tensorflow:Maybe overwriting train_steps: 200
+I0128 19:12:33.206232  1464 config_util.py:552] Maybe overwriting train_steps: 200
+INFO:tensorflow:Maybe overwriting use_bfloat16: False
+I0128 19:12:33.206232  1464 config_util.py:552] Maybe overwriting use_bfloat16: False
+INFO:tensorflow:Maybe overwriting sample_1_of_n_eval_examples: 1
+I0128 19:12:33.207197  1464 config_util.py:552] Maybe overwriting sample_1_of_n_eval_examples: 1
+INFO:tensorflow:Maybe overwriting eval_num_epochs: 1
+I0128 19:12:33.208583  1464 config_util.py:552] Maybe overwriting eval_num_epochs: 1
+WARNING:tensorflow:Expected number of evaluation epochs is 1, but instead encountered `eval_on_train_input_config.num_epochs` = 0. Overwriting `num_epochs` to 1.
+W0128 19:12:33.209762  1464 model_lib.py:809] Expected number of evaluation epochs is 1, but instead encountered `eval_on_train_input_config.num_epochs` = 0. Overwriting `num_epochs` to 1.
+INFO:tensorflow:create_estimator_and_inputs: use_tpu False, export_to_tpu None
+I0128 19:12:33.210762  1464 model_lib.py:846] create_estimator_and_inputs: use_tpu False, export_to_tpu None
+INFO:tensorflow:Using config: {'_model_dir': 'C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/output', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': allow_soft_placement: true
+graph_options {
+  rewrite_options {
+    meta_optimizer_iterations: ONE
+  }
+}
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_session_creation_timeout_secs': 7200, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x0000012A0A26A7F0>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+I0128 19:12:33.211760  1464 estimator.py:212] Using config: {'_model_dir': 'C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/output', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': allow_soft_placement: true
+graph_options {
+  rewrite_options {
+    meta_optimizer_iterations: ONE
+  }
+}
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_session_creation_timeout_secs': 7200, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x0000012A0A26A7F0>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+WARNING:tensorflow:Estimator's model_fn (<function create_model_fn.<locals>.model_fn at 0x0000012A0A26D8C8>) includes params argument, but params are not passed to Estimator.
+W0128 19:12:33.212757  1464 model_fn.py:630] Estimator's model_fn (<function create_model_fn.<locals>.model_fn at 0x0000012A0A26D8C8>) includes params argument, but params are not passed to Estimator.
+INFO:tensorflow:Not using Distribute Coordinator.
+I0128 19:12:33.213754  1464 estimator_training.py:186] Not using Distribute Coordinator.
+INFO:tensorflow:Running training and evaluation locally (non-distributed).
+I0128 19:12:33.214750  1464 training.py:612] Running training and evaluation locally (non-distributed).
+INFO:tensorflow:Start train and evaluate loop. The evaluate will happen after every checkpoint. Checkpoint frequency is determined based on RunConfig arguments: save_checkpoints_steps None or save_checkpoints_secs 600.
+I0128 19:12:33.215749  1464 training.py:700] Start train and evaluate loop. The evaluate will happen after every checkpoint. Checkpoint frequency is determined based on RunConfig arguments: save_checkpoints_steps None or save_checkpoints_secs 600.
+WARNING:tensorflow:From D:\Anaconda3\envs\tf1\lib\site-packages\tensorflow_core\python\training\training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+W0128 19:12:33.226484  1464 deprecation.py:323] From D:\Anaconda3\envs\tf1\lib\site-packages\tensorflow_core\python\training\training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+Windows fatal exception: access violation
+
+Current thread 0x000005b8 (most recent call first):
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\tensorflow_core\python\lib\io\file_io.py", line 84 in _preread_check
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\tensorflow_core\python\lib\io\file_io.py", line 122 in read
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\object_detection\utils\label_map_util.py", line 168 in load_labelmap
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\object_detection\utils\label_map_util.py", line 201 in get_label_map_dict
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\object_detection\data_decoders\tf_example_decoder.py", line 89 in __init__
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\object_detection\data_decoders\tf_example_decoder.py", line 416 in __init__
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\object_detection\builders\decoder_builder.py", line 64 in build
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\object_detection\builders\dataset_builder.py", line 210 in build
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\object_detection\inputs.py", line 897 in train_input
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\object_detection\inputs.py", line 757 in _train_input_fn
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\tensorflow_estimator\python\estimator\estimator.py", line 1116 in _call_input_fn
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\tensorflow_estimator\python\estimator\estimator.py", line 1025 in _get_features_and_labels_from_input_fn
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\tensorflow_estimator\python\estimator\estimator.py", line 1188 in _train_model_default
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\tensorflow_estimator\python\estimator\estimator.py", line 1161 in _train_model
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\tensorflow_estimator\python\estimator\estimator.py", line 370 in train
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\tensorflow_estimator\python\estimator\training.py", line 714 in run_local
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\tensorflow_estimator\python\estimator\training.py", line 613 in run
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\tensorflow_estimator\python\estimator\training.py", line 473 in train_and_evaluate
+  File "object_detection/model_main.py", line 104 in main
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\absl\app.py", line 251 in _run_main
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\absl\app.py", line 303 in run
+  File "D:\Anaconda3\envs\tf1\lib\site-packages\tensorflow_core\python\platform\app.py", line 40 in run
+  File "object_detection/model_main.py", line 108 in <module>

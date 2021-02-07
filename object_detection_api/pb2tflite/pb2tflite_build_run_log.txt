@@ -1,0 +1,40 @@
+bazel run --config=opt tensorflow/lite/toco:toco -- --input_file=C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/output/tflite_graph.pb --output_file=C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/output/detect.tflite --input_shapes=1,300,300,3 --input_arrays=normalized_input_image_tensor --output_arrays='TFLite_Detection_PostProcess','TFLite_Detection_PostProcess:1','TFLite_Detection_PostProcess:2','TFLite_Detection_PostProcess:3'  --inference_type=FLOAT --allow_custom_ops
+
+INFO: From Linking tensorflow/lite/toco/toco.exe:
+LINK : warning LNK4044: 脦脼路篓脢露卤冒碌脛脩隆脧卯隆掳/ldl隆卤拢禄脪脩潞枚脗脭
+LINK : warning LNK4044: 脦脼路篓脢露卤冒碌脛脩隆脧卯隆掳/lpthread隆卤拢禄脪脩潞枚脗脭
+LINK : warning LNK4044: 脦脼路篓脢露卤冒碌脛脩隆脧卯隆掳/ldl隆卤拢禄脪脩潞枚脗脭
+  脮媒脭脷麓麓陆篓驴芒 bazel-out/x64_windows-opt/bin/tensorflow/lite/toco/toco.lib 潞脥露脭脧贸 bazel-out/x64_windows-opt/bin/tensorflow/lite/toco/toco.exp
+Target //tensorflow/lite/toco:toco up-to-date:
+  C:/users/tt/_bazel_tt/dkcmlbh6/execroot/org_tensorflow/bazel-out/x64_windows-opt/bin/tensorflow/lite/toco/toco.exe
+INFO: Elapsed time: 589.482s, Critical Path: 222.86s, Remote (0.00% of the time): [queue: 0.00%, setup: 0.00%, process: 0.00%]
+INFO: 1104 processes: 1104 local.
+INFO: Build completed successfully, 1105 total actions
+INFO: Running command line: C:/users/tt/_bazel_tt/dkcmlbh6/execroot/org_tensorflow/bazel-out/x64_windows-opt/bin/tensorflow/lite/toco/toco.exe '--input_file=C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/output/tflite_graph.pb' '--output_file=C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/output/detect.tflite' '--input_shapes=1,300,300,3' '--input_arrays=normalized_input_image_tensor' '--output_arrays='\''TFLite_Detection_PostProcess'\'','\''TFLite_DetectionINFO: Build completed successfully, 1105 total actions
+2021-01-31 18:15:31.692108: I tensorflow/lite/toco/import_tensorflow.cc:1324] Converting unsupported operation: TFLite_Detection_PostProcess
+2021-01-31 18:15:31.708218: F tensorflow/lite/toco/tooling_util.cc:905] Check failed: GetOpWithOutput(model, output_array) Specified output array "'TFLite_Detection_PostProcess'" is not produced by any op in this graph. Is it a typo? To silence this message, pass this flag:  allow_nonexistent_arrays
+
+
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+bazel run --config=opt tensorflow/lite/toco:toco -- --input_file=C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/output/tflite_graph.pb --output_file=C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/output/detect.tflite --input_shapes=1,300,300,3 --input_arrays=normalized_input_image_tensor --output_arrays=TFLite_Detection_PostProcess  --inference_type=FLOAT --allow_custom_ops
+
+--output_arrays=TFLite_Detection_PostProcess
+
+WARNING: Option 'experimental_shortened_obj_file_path' is deprecated
+INFO: Analysed target //tensorflow/lite/toco:toco (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Target //tensorflow/lite/toco:toco up-to-date:
+  C:/users/tt/_bazel_tt/dkcmlbh6/execroot/org_tensorflow/bazel-out/x64_windows-opt/bin/tensorflow/lite/toco/toco.exe
+INFO: Elapsed time: 1.271s, Critical Path: 0.01s, Remote (0.00% of the time): [queue: 0.00%, setup: 0.00%, process: 0.00%]
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: C:/users/tt/_bazel_tt/dkcmlbh6/execroot/org_tensorflow/bazel-out/x64_windows-opt/bin/tensorflow/lite/toco/toco.exe '--input_file=C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/output/tflite_graph.pb' '--output_file=C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/output/detect.tflite' '--input_shapes=1,300,300,3' '--input_arrays=normalized_input_image_tensor' '--output_arrays=TFLite_Detection_PostProcess' '--inference_type=FLOAT' --INFO: Build completed successfully, 1 total action
+2021-02-01 10:24:28.759494: I tensorflow/lite/toco/import_tensorflow.cc:1324] Converting unsupported operation: TFLite_Detection_PostProcess
+2021-02-01 10:24:28.785482: I tensorflow/lite/toco/graph_transformations/graph_transformations.cc:39] Before Removing unused ops: 500 operators, 751 arrays (0 quantized)
+2021-02-01 10:24:28.810765: I tensorflow/lite/toco/graph_transformations/graph_transformations.cc:39] Before general graph transformations: 500 operators, 751 arrays (0 quantized)
+2021-02-01 10:24:28.862655: I tensorflow/lite/toco/graph_transformations/graph_transformations.cc:39] After general graph transformations pass 1: 64 operators, 173 arrays (0 quantized)
+2021-02-01 10:24:28.865287: I tensorflow/lite/toco/graph_transformations/graph_transformations.cc:39] Before dequantization graph transformations: 64 operators, 173 arrays (0 quantized)
+2021-02-01 10:24:28.868172: I tensorflow/lite/toco/allocate_transient_arrays.cc:345] Total transient array allocated size: 11520000 bytes, theoretical optimal value: 8640000 bytes.
+2021-02-01 10:24:28.868704: I tensorflow/lite/toco/toco_tooling.cc:399] Estimated count of arithmetic ops: 2.29818 billion (note that a multiply-add is counted as 2 ops).
+2021-02-01 10:24:28.869321: W tensorflow/lite/toco/tflite/operator.cc:1407] Ignoring unsupported type in list attribute with key '_output_types'

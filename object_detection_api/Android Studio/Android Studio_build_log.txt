@@ -1,0 +1,20 @@
+Android studio3.5.3
+
+2021/2/1
+13:50	IDE and Plugin Updates: Android Studio is ready to update.
+
+13:51	Gradle sync started with single-variant sync
+
+13:51	Gradle sync failed: This version of Android Studio cannot open this project, please retry with Android Studio 4.0 or newer. (4 s 190 ms)
+
+13:51	Android Studio is using this JDK location:
+			D:\Android Studio\jre
+			which is different to what Gradle uses by default:
+			C:\Program Files\Java\jdk1.8.0_91
+			Using different locations may spawn multiple Gradle daemons if
+			Gradle tasks are run from command line while using Android Studio.
+			More info...
+			Set Android Studio to use the same JDK as Gradle and sync project
+			Do not show this warning again
+
+13:51	NDK Resolution Outcome: Project settings: Gradle model version=6.7, NDK version is UNKNOWN

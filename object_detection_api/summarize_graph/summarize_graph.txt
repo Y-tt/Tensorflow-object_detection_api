@@ -1,0 +1,15 @@
+INFO: From Linking tensorflow/tools/graph_transforms/summarize_graph.exe:
+  脮媒脭脷麓麓陆篓驴芒 bazel-out/x64_windows-opt/bin/tensorflow/tools/graph_transforms/summarize_graph.lib 潞脥露脭脧贸 bazel-out/x64_windows-opt/bin/tensorflow/tools/graph_transforms/summarize_graph.exp
+Target //tensorflow/tools/graph_transforms:summarize_graph up-to-date:
+  C:/users/tt/_bazel_tt/dkcmlbh6/execroot/org_tensorflow/bazel-out/x64_windows-opt/bin/tensorflow/tools/graph_transforms/summarize_graph.exe
+INFO: Elapsed time: 22.294s, Critical Path: 7.95s, Remote (0.00% of the time): [queue: 0.00%, setup: 0.00%, process: 0.00%]
+INFO: 7 processes: 7 local.
+INFO: Build completed successfully, 8 total actions
+INFO: Running command line: C:/users/tt/_bazel_tt/dkcmlbh6/execroot/org_tensorflow/bazel-out/x64_windows-opt/bin/tensorflow/tools/graph_transforms/summarize_graph.exe '--in_graph=C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/outpuINFO: Build completed successfully, 8 total actions
+Found 1 possible inputs: (name=normalized_input_image_tensor, type=float(1), shape=[1,300,300,3])
+No variables spotted.
+Found 1 possible outputs: (name=TFLite_Detection_PostProcess, op=TFLite_Detection_PostProcess)
+Found 5770646 (5.77M) const parameters, 0 (0) variable parameters, and 0 control_edges
+Op types used: 215 Const, 201 Identity, 35 FusedBatchNorm, 35 Relu6, 34 Conv2D, 13 DepthwiseConv2dNative, 12 BiasAdd, 12 Reshape, 2 ConcatV2, 1 Placeholder, 1 RealDiv, 1 Sigmoid, 1 Squeeze, 1 TFLite_Detection_PostProcess
+To use with tensorflow/tools/benchmark:benchmark_model try these arguments:
+bazel run tensorflow/tools/benchmark:benchmark_model -- --graph=C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/output/tflite_graph.pb --show_flops --input_layer=normalized_input_image_tensor --input_layer_type=float --input_layer_shape=1,300,300,3 --output_layer=TFLite_Detection_PostProcess

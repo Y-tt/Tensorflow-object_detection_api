@@ -1,0 +1,5 @@
+Android Studio 3.5.3
+
+HAXM installation failed. To install HAXM follow the instructions found at: https://software.intel.com/android/articles/installation-instructions-for-intel-hardware-accelerated-execution-manager-windows
+Installer log is located at C:\Users\tt\AppData\Local\Temp\haxm_log.txt
+Installer log contents:

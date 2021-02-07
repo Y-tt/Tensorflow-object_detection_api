@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "object_detection/model_main.py", line 109, in <module>
+    tf.app.run()
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\platform\app.py", line 125, in run
+    _sys.exit(main(argv))
+  File "object_detection/model_main.py", line 105, in main
+    tf.estimator.train_and_evaluate(estimator, train_spec, eval_specs[0])
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\training.py", line 471, in train_and_evaluate
+    return executor.run()
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\training.py", line 610, in run
+    return self.run_local()
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\training.py", line 711, in run_local
+    saving_listeners=saving_listeners)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\estimator.py", line 354, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\estimator.py", line 1207, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\estimator.py", line 1241, in _train_model_default
+    saving_listeners)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\estimator.py", line 1471, in _train_with_estimator_spec
+    _, loss = mon_sess.run([estimator_spec.train_op, estimator_spec.loss])
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\training\monitored_session.py", line 783, in __exit__
+    self._close_internal(exception_type)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\training\monitored_session.py", line 816, in _close_internal
+    h.end(self._coordinated_creator.tf_sess)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\training\basic_session_run_hooks.py", line 590, in end
+    l.end(session, last_step)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\training.py", line 531, in end
+    self._evaluate(global_step_value)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\training.py", line 537, in _evaluate
+    self._evaluator.evaluate_and_export())
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\training.py", line 924, in evaluate_and_export
+    is_the_final_export)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\training.py", line 957, in _export_eval_result
+    is_the_final_export=is_the_final_export))
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\exporter.py", line 418, in export
+    is_the_final_export)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\exporter.py", line 126, in export
+    strip_default_attrs=self._strip_default_attrs)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\estimator.py", line 663, in export_savedmodel
+    mode=model_fn_lib.ModeKeys.PREDICT)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\estimator.py", line 789, in _export_saved_model_for_mode
+    strip_default_attrs=strip_default_attrs)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\estimator\estimator.py", line 883, in _export_all_saved_models
+    builder = saved_model_builder.SavedModelBuilder(temp_export_dir)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\saved_model\builder_impl.py", line 97, in __init__
+    file_io.recursive_create_dir(self._export_dir)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\lib\io\file_io.py", line 379, in recursive_create_dir
+    pywrap_tensorflow.RecursivelyCreateDir(compat.as_bytes(dirname), status)
+  File "D:\Anaconda3\envs\tf\lib\site-packages\tensorflow\python\framework\errors_impl.py", line 528, in __exit__
+    c_api.TF_GetCode(self.status.status))
+tensorflow.python.framework.errors_impl.NotFoundError: Failed to create a directory: C:/Users/tt/Desktop/ssd_mobilenet_v1_coco_2018_01_28/output\export\Servo\temp-b'1611917251'; No such file or directory
